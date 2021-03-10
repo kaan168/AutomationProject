@@ -1,0 +1,15 @@
+﻿@model OnlineTicaretSitesi.Models.Siniflar.Departman
+@{
+    ViewBag.Title = "DepartmanEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<form autocomplete="off" class="form-group" method="post">
+    <div style="margin-top:20px">
+        <label>Departman Adı : </label>
+        @Html.TextBoxFor(x => x.DepartmanAd, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:30px;margin-left:97px">
+        <button class="btn btn-warning">Kategori Ekle</button>
+    </div>
+</form>

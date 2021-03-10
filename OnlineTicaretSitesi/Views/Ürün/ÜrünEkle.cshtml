@@ -1,0 +1,47 @@
+﻿@model OnlineTicaretSitesi.Models.Siniflar.Urun
+@{
+    ViewBag.Title = "YeniÜrün";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2> Ürün Sayfası</h2>
+<br />
+<form class="form-group" method="post" autocomplete="off">
+    <label>Ürün Adı :</label>
+    @Html.TextBoxFor(x => x.UrunAd, new { @class = "form-control" })
+    <br />
+    <br />
+    <label>Marka :</label>
+    @Html.TextBoxFor(x => x.Marka, new { @class = "form-control" })
+    <br />
+    <br />
+    <label>Stok :</label>
+    @Html.TextBoxFor(x => x.Stok, new { @class = "form-control" })
+    <br />
+    <br />
+    <label>Alış Fiyatı :</label>
+    @Html.TextBoxFor(x => x.AlisFiyat, new { @class = "form-control" })
+    <br />
+    <br />
+    <label>Satış Fiyatı :</label>
+    @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control" })
+    <br />
+    <br />
+    <label>Kategori :</label>
+    @Html.DropDownListFor(x => x.Kategoriid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+    @*@Html.TextBoxFor(x => x.Kategoriid, new { @class = "form-control" })*@
+    <br />
+    <br />
+    <label>Görsel :</label>
+    @Html.TextBoxFor(x => x.UrunGorsel, new { @class = "form-control" })
+    <br />
+    <br />
+    <label>Durum :</label>
+    @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })
+    <br />
+    <br />
+    <button class="btn btn-warning">Ürün Ekle</button>
+</form>
+
+
+
