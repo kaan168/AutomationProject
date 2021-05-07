@@ -53,5 +53,9 @@ namespace OnlineTicaretSitesi.Controllers
 
             return View();
         }
+        public ActionResult BasitTablolar()
+        {
+            return View();
+        }
     }
 }
