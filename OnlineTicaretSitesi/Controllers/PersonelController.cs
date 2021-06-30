@@ -68,5 +68,10 @@ namespace OnlineTicaretSitesi.Controllers
             return RedirectToAction("Index");
              
         }
-    }
+        public ActionResult PersonelListe()
+        {
+            var sorgu = db.Personels.ToList();
+            return View(sorgu);
+        }
+        }
 }
