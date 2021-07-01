@@ -1,5 +1,7 @@
 ﻿@using OnlineTicaretSitesi.Models.Siniflar
-@model List<Kategori>
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Kategori>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
@@ -29,6 +31,9 @@
         </tr>
     }
 </table>
+@Html.PagedListPager((IPagedList)Model,sayfa=>Url.Action("Inex", new { sayfa }))
+
+
 <a href="/Kategori/KategoriEkle" class="btn btn-primary">Yeni Kategori</a>
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet" />
